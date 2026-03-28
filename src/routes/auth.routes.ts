@@ -2,7 +2,7 @@ import { Router } from 'express'
 import * as ctrl from '../controllers/auth.controller'
 import { authenticate } from '../middleware/auth'
 
-const r = Router()
+const r: Router = Router()
 
 r.post('/register', ctrl.register)
 r.post('/login',    ctrl.login)

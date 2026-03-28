@@ -106,7 +106,7 @@ export async function removeAddress(
   res: Response
 ): Promise<void> {
   await prisma.address.delete({
-    where: { id: req.params.addressId },
+    where: { id: req.params.addressId as string },
   })
 
   const addresses = await prisma.address.findMany({

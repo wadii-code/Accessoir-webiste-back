@@ -4,7 +4,7 @@ import { prisma } from '../utils/prisma'
 import { AppError } from '../utils/AppError'
 import { z } from 'zod'
 
-const r = Router()
+const r: Router = Router()
 
 const reviewSchema = z.object({
   rating: z.number().int().min(1).max(5),

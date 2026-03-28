@@ -3,7 +3,7 @@ import * as ctrl from '../controllers/product.controller'
 import { authenticate, requireAdmin } from '../middleware/auth'
 import { upload } from '../middleware/upload'
 
-const r = Router()
+const r: Router = Router()
 
 r.get('/',                ctrl.list)
 r.get('/featured',        ctrl.getFeatured)
